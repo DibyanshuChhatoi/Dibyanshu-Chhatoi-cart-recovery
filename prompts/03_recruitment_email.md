@@ -1,0 +1,3 @@
+# Recruitment Email Context
+
+YottaFlex AI Technologies Pvt. Ltd. informed the candidate that they had cleared AI Screening and advanced to Round 3: a 72 Hours Code Challenge. The problem statement was available on the recruitment portal. The email stated that the submission must be one public GitHub repository containing the code and requested artifacts, and the repository link must be submitted on the portal before the deadline. It advised checking the public link in a private browser window. AI coding tools were permitted, with the candidate expected to understand the submitted code. The stated deadline was Saturday, November 14, 2026 at 3:11:18 PM India Standard Time.
