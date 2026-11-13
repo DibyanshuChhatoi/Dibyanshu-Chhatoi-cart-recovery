@@ -1,25 +1,43 @@
+
 # AI Usage Disclosure
 
-## Tools used
+## AI tools used
 
-- ChatGPT: requirement interpretation, architecture discussion, code drafting, documentation drafting, test design and debugging assistance.
+- ChatGPT: requirement analysis, architecture planning, code generation, documentation drafting, test design, debugging and validation guidance.
 
-## Where AI accelerated the work
+## AI-assisted work
 
-- Translated the business statement into a workflow and entity model.
-- Proposed a Python/SQLite/Streamlit architecture suitable for local execution.
-- Drafted the initial database schema, synthetic data generator, business logic, export routines, validation routines, tests and documentation.
-- Assisted with debugging the starter test and performance bottlenecks found during larger-volume validation.
+ChatGPT assisted with:
+- Translating the business requirements into a data workflow and entity model.
+- Designing the Python, SQLite and Streamlit project structure.
+- Drafting the database schema and synthetic data generator.
+- Drafting business rules, anomaly injection, validation, analytics and export modules.
+- Drafting automated tests, README and technical documentation.
+- Troubleshooting environment setup, execution and validation.
 
-## Candidate review and validation — complete before submission
+## Candidate execution and verification
 
-The candidate must personally:
+The candidate personally performed the following project execution and verification steps:
 
-- Read and understand each core module, especially `generators/synthetic_generator.py`, `engines/business_rules.py`, `validation/anomaly_injector.py`, `validation/validator.py`, `analytics/metrics.py`, and `exports/exporter.py`.
-- Run the setup commands and execute the application locally.
-- Inspect the SQLite tables, CSV/JSON/SQL exports and ground-truth labels.
-- Run `pytest -q` and understand what each test proves.
-- Verify the full-volume row counts and repeat-generation checksums.
-- Record any code changes personally made and any additional tests run.
+- Created and activated a Python virtual environment using Python 3.13.5.
+- Installed the project dependencies.
+- Executed the automated test suite; both available tests passed.
+- Generated the full dataset using 50,000 carts, 20,000 baseline abandoned carts and 10,000 send attempts.
+- Ran the Streamlit dashboard locally and inspected its displayed metrics, charts, campaign results, suppression decisions and validation results.
+- Inspected the generated ground-truth anomaly records and validation report.
+- Repeated full dataset generation with seed 20261022.
+- Compared SHA-256 checksums of CSV, JSON and SQL exports, excluding the timestamp-dependent source manifest. No differences were found.
 
-Do not submit this disclosure unchanged if any statement above is not true. Update it to accurately describe what was reviewed, changed and personally verified. AI-generated code is not a substitute for candidate understanding or ownership.
+## Candidate review still required
+
+Before submission, the candidate must personally:
+
+- Read and understand the core source modules and be able to explain their logic.
+- Understand the database relationships, business rules, validation checks and analytics calculations.
+- Review the generated exports and documentation.
+- Be able to explain the assumptions, limitations and design trade-offs.
+- Record any additional changes and tests performed.
+
+## Transparency statement
+
+AI assistance was used extensively, including for drafting implementation code. The candidate executed the project locally and performed the verification steps listed above. AI-generated code should not be represented as independently written by the candidate. The candidate is responsible for reviewing, understanding and explaining the submitted work.
